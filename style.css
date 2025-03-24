@@ -1,12 +1,11 @@
-* {
+
+/* General Styles */
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
-body {
-  background-color: #ffe6f0; /* Light pink background */
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffe6f0;
   text-align: center;
 }
 
@@ -15,31 +14,33 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh; /* 80% screen height */
+  height: 80vh;
   padding: 20px;
 }
 
 .content {
-  max-width: 500px;
-  text-align: left;
+  max-width: 600px;
+  text-align: center;
 }
 
 h1 {
   color: #d81b60;
-  font-size: 36px;
+  font-size: 42px;
+  font-weight: bold;
   margin-bottom: 15px;
 }
 
 h2 {
   color: #880e4f;
-  font-size: 24px;
+  font-size: 26px;
   margin-bottom: 10px;
+  font-weight: 500;
 }
 
 p {
   color: #4a148c;
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: 20px;
+  line-height: 1.8;
   margin-bottom: 20px;
 }
 
@@ -48,29 +49,20 @@ p {
   display: inline-block;
   background: #d81b60;
   color: white;
-  padding: 12px 25px;
-  border-radius: 5px;
+  padding: 14px 30px;
+  border-radius: 8px;
   text-decoration: none;
-  font-size: 18px;
-  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 .btn:hover {
   background: #ad1457;
+  transform: scale(1.05);
 }
 
-/* Image Container */
-.image-container {
-  width: 350px;
-  margin-left: 50px;
-}
-
-.image-container img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-/* Navigation (moved below) */
+/* Navigation */
 nav {
   display: flex;
   justify-content: center;
@@ -92,12 +84,69 @@ nav a {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  font-size: 18px;
-  padding: 5px 15px;
+  font-size: 20px;
+  padding: 8px 20px;
+  transition: 0.3s;
 }
 
+nav a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
 
+/* About, Skills, and Contact Sections */
+.section {
+  display: none; /* Hidden by default */
+  padding: 60px 20px;  /* Added top padding to avoid sticking to the top */
+  margin: 0;
+  border-radius: 15px;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  text-align: center;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
 
+#about-section {
+  background: #ffe6f0;
+}
 
+#skills-section {
+  background: #ffccdd;
+}
+
+#contact-section {
+  background: #f8bbd0;
+}
+
+.section h2 {
+  font-size: 36px;
+  color: #d81b60;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 20px;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+  .content {
+    max-width: 90%;
+  }
+  .section {
+    width: 100%;
+  }
+}
 
 
